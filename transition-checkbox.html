@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Transición checkbox</title>
+	<style>
+		label[for="toogle"] {
+			display: block;
+			position: relative;
+			width: 50px;
+			height: 25px;
+			background-color: lightgrey;
+			border-radius: 10px;
+		}
+		label span {
+			display: block;
+			position: absolute;
+			top: 0;
+			left: 0;
+			width: 25px;
+			height: 25px;
+			background-color: limegreen;
+			border-radius: 50%;
+		}
+		input[type="checkbox"]{
+			display: none;
+		}
+		input[type="checkbox"]:checked + span {
+			left: 25px;
+			transition: left 1s ease;
+		}
+		input[type="checkbox"]:not(:checked) + span {
+			left: 0px;
+			transition: left 1s ease;
+		}		
+	</style>
+</head>
+<body>
+	<label for="toogle">
+		<input id="toogle" type="checkbox" name="sino">
+		<span></span>
+	</label>		
+</body>
+</html>
